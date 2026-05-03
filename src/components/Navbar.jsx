@@ -23,13 +23,10 @@ const Navbar = () => {
                         <Link href={"/"}>Home</Link>
                     </li>
                     <li>
-                        <Link href={"/all-photos"}>All Photos</Link>
+                        <Link href={"/products"}>Products</Link>
                     </li>
                     <li>
-                        <Link href={"/pricing"}>Pricing</Link>
-                    </li>
-                    <li>
-                        <Link href={"/profile"}>Profile</Link>
+                        <Link href={"/profile"}>My Profile</Link>
                     </li>
                 </ul>
 

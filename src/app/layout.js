@@ -1,5 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const OutFitFont = Outfit({
   subsets: ["latin"],
@@ -18,7 +20,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OutFitFont.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar/>
+        <main className="max-w-7xl mx-auto">{children}</main>
+        <Footer/>
+        </body>
     </html>
   );
 }
