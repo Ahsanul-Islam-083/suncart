@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 45,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.ibb.co.com/bRJ5MFqp/UVglasses.jpg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 2,
+    "name": "Polarized Aviator Sunglasses",
+    "brand": "CoastalVibe",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 32,
+    "description": "Classic aviator style with premium polarized lenses for glare-free vision.",
+    "image": "https://i.ibb.co.com/JFyn7DcB/Polarized-Glass.jpg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 3,
+    "name": "Oversized Square Sunglasses",
+    "brand": "Lumina",
+    "price": 22,
+    "rating": 4.8,
+    "stock": 28,
+    "description": "Trendy oversized frames that offer full UV protection and a chic look.",
+    "image": "https://i.ibb.co.com/d0CdTPtr/Oversized-Glass.jpg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 4,
+    "name": "Linen Shirt + Shorts Set",
+    "brand": "BreezeWear",
+    "price": 45,
+    "rating": 4.6,
+    "stock": 19,
+    "description": "Breathable linen summer outfit set perfect for beach walks and casual outings.",
+    "image": "https://i.ibb.co.com/xq0j8WJ8/Shirt-short.png",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 5,
+    "name": "Floral Maxi Sundress",
+    "brand": "SunnyDays",
+    "price": 35,
+    "rating": 4.9,
+    "stock": 24,
+    "description": "Lightweight floral printed maxi dress ideal for summer vacations.",
+    "image": "https://i.ibb.co.com/CrJj6h5/Florla-Maxi.webp",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 6,
+    "name": "Hawaiian Print Shirt",
+    "brand": "TropicFit",
+    "price": 25,
+    "rating": 4.4,
+    "stock": 50,
+    "description": "Vibrant short sleeve Hawaiian shirt for a fun summer vibe.",
+    "image": "https://i.ibb.co.com/qLxrpgDQ/Hawa-Shirt.jpg",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 7,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "GlowSkin",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 60,
+    "description": "Water-resistant broad spectrum sunscreen with lightweight non-greasy formula.",
+    "image": "https://i.ibb.co.com/BKP4kLpb/Sunscreen.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 8,
+    "name": "Hydrating Aloe Vera Gel",
+    "brand": "OceanFresh",
+    "price": 9,
+    "rating": 4.7,
+    "stock": 40,
+    "description": "Cooling aloe vera gel that soothes sunburn and deeply moisturizes skin.",
+    "image": "https://i.ibb.co.com/bjfvDw2P/aloe-vera-gel.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 9,
+    "name": "After-Sun Cooling Spray",
+    "brand": "SunGuard",
+    "price": 18,
+    "rating": 4.5,
+    "stock": 35,
+    "description": "Refreshing mist that calms and repairs skin after sun exposure.",
+    "image": "https://i.ibb.co.com/dJj36Fd2/Sunspray.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 10,
+    "name": "Beach Straw Tote Bag",
+    "brand": "CoastalCarry",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 30,
+    "description": "Spacious woven straw tote bag perfect for carrying beach essentials.",
+    "image": "https://i.ibb.co.com/XZWS0dvK/Beach-Bag.jpg",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Quick-Dry Microfiber Towel",
+    "brand": "WaveDry",
+    "price": 14,
+    "rating": 4.8,
+    "stock": 55,
+    "description": "Compact, sand-free quick-dry beach towel with carrying strap.",
+    "image": "https://i.ibb.co.com/4ZKsLrFc/towels.jpg",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 12,
+    "name": "Inflatable Flamingo Pool Float",
+    "brand": "FunFloat",
+    "price": 16,
+    "rating": 4.3,
+    "stock": 22,
+    "description": "Large inflatable flamingo float for ultimate summer beach and pool fun.",
+    "image": "https://i.ibb.co.com/gMD2pBZT/flamingo-inflatable.jpg",
+    "category": "Beach Accessories"
+  }
+]
