@@ -11,8 +11,8 @@ const Navbar = () => {
                         src={"/logo.png"}
                         alt="logo"
                         loading="eager"
-                        width={40}
-                        height={40}
+                        width={30}
+                        height={30}
                         className="object-cover h-auto w-auto"
                     />
                     <h3 className="font-black text-lg">SunCart</h3>
