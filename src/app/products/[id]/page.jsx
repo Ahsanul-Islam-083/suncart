@@ -37,7 +37,7 @@ const ProductDetailsPage = async ({ params }) => {
                 {/* Right — Details */}
                 <div className="flex flex-col gap-5">
 
-                   
+
                     <div className="flex items-center gap-2 flex-wrap">
                         <Chip size="sm">
                             {product.category}
@@ -47,20 +47,14 @@ const ProductDetailsPage = async ({ params }) => {
                         </Chip>
                     </div>
 
-                  
+
                     <h1 className="text-2xl sm:text-3xl font-bold text-black dark:text-white leading-tight">
                         {product.name}
                     </h1>
 
                     <div className="flex items-center gap-2">
                         <div className="flex items-center gap-0.5">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                                <FiStar
-                                    key={star}
-                                    size={16}
-                                    className={star <= Math.round(product.rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}
-                                />
-                            ))}
+                            <FiStar className="text-yellow-400 fill-yellow-400" />
                         </div>
                         <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{product.rating}</span>
                         <span className="text-sm text-gray-400">/ 5</span>
@@ -68,8 +62,8 @@ const ProductDetailsPage = async ({ params }) => {
 
                     <div className="flex items-baseline gap-3">
                         <span className="text-3xl font-bold text-black dark:text-white">${product.price}</span>
-                        <span className="text-sm text-gray-400 line-through">${(product.price * 1.2).toFixed(2)}</span>
-                        <Chip size="sm" className="bg-green-100 text-green-700 text-xs font-semibold">20% OFF</Chip>
+                        <span className="text-sm text-gray-400 line-through">${(product.price * 2).toFixed(2)}</span>
+                        <Chip size="sm" className="bg-green-100 text-green-700 text-xs font-semibold">50% OFF</Chip>
                     </div>
 
                     <Separator />
