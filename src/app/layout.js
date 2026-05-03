@@ -2,7 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import 'animate.css';
 const OutFitFont = Outfit({
   subsets: ["latin"],
 });
