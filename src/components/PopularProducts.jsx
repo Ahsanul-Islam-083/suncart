@@ -21,7 +21,7 @@ const PopularProducts = async () => {
                 ))}
             </div>
             <div className="text-center">
-                <Link href={'/products'}> <Button variant="outline" className="bg-white z-10">View all products...</Button></Link>
+                <Link href={'/products'}> <Button variant="outline" className="bg-white z-10 hover:bg-gray-100 transition-all duration-200 hover:scale-[1] hover:shadow-lg hover:shadow-gray-300">View all products...</Button></Link>
             </div>
         </div>
     );

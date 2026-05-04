@@ -6,13 +6,13 @@ import { FiTwitter, FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 const Footer = () => {
     return (
         <footer className="relative mt-24 bg-white z-10">
-            <div className="mt-12 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+            <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
             {/* Background Layer */}
             <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
 
             {/* Subtle Gradient Glow */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-purple-500/5 via-transparent to-blue-500/5 dark:from-purple-500/10 dark:to-blue-500/10 blur-3xl" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-tr from-purple-500/5 via-transparent to-blue-500/5 dark:from-purple-500/10 dark:to-blue-500/10 blur-3xl" />
 
             {/* Content */}
             <div className="max-w-7xl mx-auto px-6 py-16">
@@ -41,16 +41,16 @@ const Footer = () => {
 
                         {/* Social Links */}
                         <div className="flex items-center gap-3 pt-1">
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200 border-2">
                                 <FiTwitter size={16} />
                             </a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200 border-2">
                                 <FiGithub size={16} />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200 border-2">
                                 <FiInstagram size={16} />
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-200 border-2">
                                 <FiLinkedin size={16} />
                             </a>
                         </div>
@@ -118,14 +118,14 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold text-black dark:text-white">Shop Now</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-400">Discover thousands of products with deals updated every day.</p>
-                        <Link href="/signup" className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-sm font-medium transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10">
+                        <Link href="/signup" className=" inline-flex items-center justify-center px-4 md:px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-sm font-medium transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10">
                            Browse Store
                         </Link>
                     </div>
                 </div>
 
                 {/* Divider */}
-                <div className="mt-12 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+                <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
                 {/* Bottom */}
                 <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
