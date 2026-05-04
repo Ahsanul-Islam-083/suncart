@@ -1,6 +1,4 @@
-
-import Marquee from "react-fast-marquee";
-import BrandCard from "./BrandCard";
+import BrandsMarquee from "./BrandsMarquee";
 
 const TopBrands = async () => {
     const res = await fetch("https://suncart-sigma.vercel.app/brands.json", { cache: "no-store" });
@@ -15,11 +13,7 @@ const TopBrands = async () => {
                 </p>
             </div>
 
-            <Marquee speed={40} gradient={true} gradientColor="white" gradientWidth={80} pauseOnHover={true}>
-                {brands.map((brand) => (
-                    <BrandCard key={brand.id} brand={brand} />
-                ))}
-            </Marquee>
+            <BrandsMarquee brands={brands} />
         </section>
     );
 };
