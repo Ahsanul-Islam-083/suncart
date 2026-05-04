@@ -75,7 +75,7 @@ const SignUpPage = () => {
 
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
 
-     
+
                         <TextField isRequired name="name" type="text" className="w-full">
                             <Label>Full Name</Label>
                             <Input placeholder="Your Name" />
@@ -116,12 +116,12 @@ const SignUpPage = () => {
                             <FieldError />
                         </TextField>
 
-       
+
                         <Checkbox isSelected={agreed} onValueChange={setAgreed} size="sm" classNames={{ label: "text-sm text-gray-600" }}>
                             I agree to <span className="text-cyan-500 cursor-pointer hover:underline">Terms & Conditions</span>
                         </Checkbox>
 
-      
+
                         <div className="flex flex-wrap gap-3 mt-2">
                             <Button
                                 type="submit"
@@ -147,7 +147,7 @@ const SignUpPage = () => {
                             <Separator className="flex-1" />
                         </div>
 
-   
+
                         <Button
                             type="button"
                             onPress={handleGoogleSignIn}
@@ -158,10 +158,16 @@ const SignUpPage = () => {
                             <FaGoogle size={16} className="text-red-500" />
                             Sign in with Google
                         </Button>
+                        <p className="text-sm text-center text-gray-500 mt-2">
+                           Already signed up?{" "}
+                            <Link href="/signin" className="text-cyan-500 font-medium hover:underline">
+                                Login
+                            </Link>
+                        </p>
                     </Form>
                 </div>
 
-      
+
                 <div className="hidden md:block w-1/2 p-4">
                     <div className="relative h-full w-full min-h-140 rounded-2xl overflow-hidden">
                         <Image
