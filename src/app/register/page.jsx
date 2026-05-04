@@ -116,12 +116,6 @@ const SignUpPage = () => {
                             <FieldError />
                         </TextField>
 
-
-                        <Checkbox isSelected={agreed} onValueChange={setAgreed} size="sm" classNames={{ label: "text-sm text-gray-600" }}>
-                            I agree to <span className="text-cyan-500 cursor-pointer hover:underline">Terms & Conditions</span>
-                        </Checkbox>
-
-
                         <div className="flex flex-wrap gap-3 mt-2">
                             <Button
                                 type="submit"
@@ -137,7 +131,7 @@ const SignUpPage = () => {
                                 radius="full"
                                 className="border border-cyan-500 text-cyan-500 text-sm font-medium hover:bg-cyan-50"
                             >
-                                Sign In
+                                Login
                             </Button></Link>
                         </div>
 

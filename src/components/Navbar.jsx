@@ -65,7 +65,7 @@ const Navbar = () => {
                         {!user ? (
                             <>
                                 <Link href="/signin" className="text-sm px-5 py-2 rounded-full border-2 font-medium text-gray-600 hover:text-black transition-colors hover:bg-gray-100">
-                                    Sign In
+                                   Login
                                 </Link>
                                 <Link href="/register" className="px-5 py-2 bg-black text-white rounded-full text-sm font-semibold hover:opacity-80 transition-all">
                                     Register
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 {/* used onPres cause it works on Mouse, touch, keyboard (Enter/Space)*/}
                                 <Button onPress={handleSignOut} size="sm" variant="" radius="full" className="border-2 hover:bg-gray-100">
                                     <FiLogOut size={13} />
-                                    Sign Out
+                                    Logout
                                 </Button>
                             </div>
                         )}
@@ -128,13 +128,13 @@ const Navbar = () => {
                                 <p className="text-sm font-medium text-gray-700">Hi, {user?.name?.split(" ")[0]}</p>
                                 <Button onPress={handleSignOut} size="sm" variant="" radius="full" className="border-2 border-gray-200 text-gray-600 text-xs">
                                     <FiLogOut size={13} />
-                                    Sign Out
+                                    Logout
                                 </Button>
                             </div>
                         ) : (
                             <div className="pt-4 flex flex-col gap-3 px-3">
                                 <Link href="/signin" onClick={() => setIsMenuOpen(false)} className="text-center py-2.5 text-sm text-gray-600 font-medium border border-gray-200 rounded-full hover:bg-gray-50 transition-all">
-                                    Sign In
+                                    Login
                                 </Link>
                                 <Link href="/register" onClick={() => setIsMenuOpen(false)} className="text-center py-2.5 text-sm bg-black text-white rounded-full font-semibold hover:opacity-80 transition-all">
                                     Register

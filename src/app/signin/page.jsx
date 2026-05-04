@@ -74,7 +74,7 @@ const SignInPage = () => {
 
                 {/* LEFT SIDE */}
                 <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10">
-                    <h1 className="text-xl sm:text-2xl font-bold mb-1 text-black">Sign In</h1>
+                    <h1 className="text-xl sm:text-2xl font-bold mb-1 text-black">Login</h1>
                     <p className="text-sm text-gray-500 mb-5">Welcome back to SunCart</p>
 
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
