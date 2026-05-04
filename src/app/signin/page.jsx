@@ -53,6 +53,7 @@ export default function SignInPage() {
         // console.log("Google Sign In");
         const { data, error } = await authClient.signIn.social({
             provider: "google",
+            callbackURL: callbackURL,
         });
         if (!error) {
             toast.success("Welcome to SunCart 🎉");
