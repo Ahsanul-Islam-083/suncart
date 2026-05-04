@@ -75,21 +75,20 @@ const SignUpPage = () => {
 
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
 
-                        {/* NAME */}
+     
                         <TextField isRequired name="name" type="text" className="w-full">
                             <Label>Full Name</Label>
                             <Input placeholder="Your Name" />
                             <FieldError />
                         </TextField>
 
-                        {/* IMAGE URL */}
                         <TextField isRequired name="image" type="text" className="w-full">
                             <Label>Profile Image URL</Label>
                             <Input placeholder="https://example.com/photo.jpg" />
                             <FieldError />
                         </TextField>
 
-                        {/* EMAIL */}
+
                         <TextField isRequired name="email" type="email" className="w-full" validate={(value) => {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) return "Please enter a valid email address";
                             return null;
@@ -99,7 +98,7 @@ const SignUpPage = () => {
                             <FieldError />
                         </TextField>
 
-                        {/* PASSWORD */}
+
                         <TextField isRequired name="password" minLength={8} type={showPassword ? "text" : "password"} className="w-full" validate={(value) => {
                             if (value.length < 8) return "Password must be at least 8 characters";
                             if (!/[A-Z]/.test(value)) return "Must contain at least one uppercase letter";
@@ -117,12 +116,12 @@ const SignUpPage = () => {
                             <FieldError />
                         </TextField>
 
-                        {/* TERMS */}
+       
                         <Checkbox isSelected={agreed} onValueChange={setAgreed} size="sm" classNames={{ label: "text-sm text-gray-600" }}>
                             I agree to <span className="text-cyan-500 cursor-pointer hover:underline">Terms & Conditions</span>
                         </Checkbox>
 
-                        {/* BUTTONS */}
+      
                         <div className="flex flex-wrap gap-3 mt-2">
                             <Button
                                 type="submit"
@@ -142,14 +141,13 @@ const SignUpPage = () => {
                             </Button></Link>
                         </div>
 
-                        {/* DIVIDER */}
                         <div className="flex items-center gap-3 my-1">
                             <Separator className="flex-1" />
                             <span className="text-xs text-gray-400">or continue with</span>
                             <Separator className="flex-1" />
                         </div>
 
-                        {/* GOOGLE */}
+   
                         <Button
                             type="button"
                             onPress={handleGoogleSignIn}
@@ -163,7 +161,7 @@ const SignUpPage = () => {
                     </Form>
                 </div>
 
-                {/* RIGHT SIDE IMAGE */}
+      
                 <div className="hidden md:block w-1/2 p-4">
                     <div className="relative h-full w-full min-h-140 rounded-2xl overflow-hidden">
                         <Image

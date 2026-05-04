@@ -20,10 +20,10 @@ import { authClient } from "@/lib/auth-client";
 import { useSearchParams } from "next/navigation";
 
 
-const SignInPage=()=> {
+const SignInPage = () => {
     const [showPassword, setShowPassword] = useState(false);
-const searchParams = useSearchParams();
-const callbackURL = searchParams.get("callbackURL") || "/";
+    const searchParams = useSearchParams();
+    const callbackURL = searchParams.get("callbackURL") || "/";
 
 
     const onSubmit = async (e) => {
@@ -79,7 +79,7 @@ const callbackURL = searchParams.get("callbackURL") || "/";
 
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
 
-                     
+
                         <TextField isRequired name="email" type="email" className="w-full" validate={(value) => {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) return "Please enter a valid email address";
                             return null;
@@ -89,7 +89,7 @@ const callbackURL = searchParams.get("callbackURL") || "/";
                             <FieldError />
                         </TextField>
 
-                      
+
                         <TextField isRequired name="password" type={showPassword ? "text" : "password"} className="w-full">
                             <Label>Password</Label>
                             <div className="relative w-full">
