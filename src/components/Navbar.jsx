@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
@@ -12,12 +12,14 @@ import { FiLogOut } from "react-icons/fi";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
 
     const { data } = authClient.useSession();
     const user = data?.user;
 
     const handleSignOut = async () => {
         await authClient.signOut();
+        router.push("/");
     };
 
     const menuItems = [
