@@ -5,8 +5,8 @@ import { FiTwitter, FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 
 const Footer = () => {
     return (
-        <footer className="relative mt-24 bg-white z-10">
-            <div className="mt-8 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+        <footer className="relative mt-8 bg-white z-10">
+            <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
             {/* Background Layer */}
             <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
