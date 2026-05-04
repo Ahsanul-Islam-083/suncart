@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "SunShade",
+        "tagline": "Premium UV Protection",
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80"
+    },
+    {
+        "id": 2,
+        "name": "CoastalVibe",
+        "tagline": "Born by the Beach",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80"
+    },
+    {
+        "id": 3,
+        "name": "Lumina",
+        "tagline": "Glow All Summer",
+        "image": "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=400&q=80"
+    },
+    {
+        "id": 4,
+        "name": "BreezeWear",
+        "tagline": "Light & Comfortable",
+        "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80"
+    },
+    {
+        "id": 5,
+        "name": "GlowSkin",
+        "tagline": "Skincare Experts",
+        "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&q=80"
+    },
+    {
+        "id": 6,
+        "name": "AquaFresh",
+        "tagline": "Hydration First",
+        "image": "https://images.unsplash.com/photo-1559181567-c3190100191d?w=400&q=80"
+    }
+]

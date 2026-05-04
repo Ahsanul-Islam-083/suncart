@@ -2,8 +2,8 @@
 import Banner from "@/components/Banner";
 import PopularProducts from "@/components/PopularProducts";
 import SummerCareTips from "@/components/SummerCareTips";
-import { Button } from "@heroui/react";
-import Image from "next/image";
+import TopBrands from "@/components/TopBrands";
+
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <Banner/>
       <PopularProducts/>
       <SummerCareTips/>
+      <TopBrands/>
     </div>
   );
 }
