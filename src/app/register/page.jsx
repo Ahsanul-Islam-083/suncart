@@ -64,7 +64,7 @@ export default function SignUpPage() {
     return (
         <div
             className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 py-6 overflow-y-auto"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1501785888041-af3ef285b470')" }}
+            style={{ backgroundImage: "url('https://i.ibb.co.com/d4QgtKTC/bg1.jpg')" }}
         >
             <div className="animate__animated animate__fadeInUp bg-white/90 backdrop-blur-md rounded-3xl shadow-xl flex overflow-hidden max-w-5xl w-full my-4">
 
@@ -167,7 +167,7 @@ export default function SignUpPage() {
                 <div className="hidden md:block w-1/2 p-4">
                     <div className="relative h-full w-full min-h-140 rounded-2xl overflow-hidden">
                         <Image
-                            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                            src="https://i.ibb.co.com/d4QgtKTC/bg1.jpg"
                             alt="nature"
                             fill
                             className="object-cover"
