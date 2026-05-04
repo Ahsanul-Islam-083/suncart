@@ -15,7 +15,7 @@ const PopularProducts = async () => {
         <div className="space-y-10 mt-10">
             <h1 className="animate__animated animate__bounceInRight animate__slow text-center text-2xl sm:text-3xl text-black font-bold">🔥 Popular Products</h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate__animated animate__bounceInUp animate__slow ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate__animated animate__bounceInLeft animate__slow ">
                 {popularProducts.slice(0, 3).map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}
