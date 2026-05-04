@@ -20,7 +20,7 @@ import { authClient } from "@/lib/auth-client";
 import { useSearchParams } from "next/navigation";
 
 
-export default function SignInPage() {
+const SignInPage=()=> {
     const [showPassword, setShowPassword] = useState(false);
 const searchParams = useSearchParams();
 const callbackURL = searchParams.get("callbackURL") || "/";
@@ -79,7 +79,7 @@ const callbackURL = searchParams.get("callbackURL") || "/";
 
                     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
 
-                        {/* EMAIL */}
+                     
                         <TextField isRequired name="email" type="email" className="w-full" validate={(value) => {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) return "Please enter a valid email address";
                             return null;
@@ -89,7 +89,7 @@ const callbackURL = searchParams.get("callbackURL") || "/";
                             <FieldError />
                         </TextField>
 
-                        {/* PASSWORD */}
+                      
                         <TextField isRequired name="password" type={showPassword ? "text" : "password"} className="w-full">
                             <Label>Password</Label>
                             <div className="relative w-full">
@@ -119,7 +119,6 @@ const callbackURL = searchParams.get("callbackURL") || "/";
                             <Separator className="flex-1" />
                         </div>
 
-                        {/* GOOGLE */}
                         <Button
                             type="button"
                             onPress={handleGoogleSignIn}
@@ -132,7 +131,6 @@ const callbackURL = searchParams.get("callbackURL") || "/";
                             Sign in with Google
                         </Button>
 
-                        {/* REGISTER LINK */}
                         <p className="text-sm text-center text-gray-500 mt-2">
                             Don&apos;t have an account?{" "}
                             <Link href="/register" className="text-cyan-500 font-medium hover:underline">
@@ -142,7 +140,7 @@ const callbackURL = searchParams.get("callbackURL") || "/";
                     </Form>
                 </div>
 
-                {/* RIGHT SIDE IMAGE */}
+
                 <div className="hidden md:block w-1/2 p-4">
                     <div className="relative h-full w-full min-h-125 rounded-2xl overflow-hidden">
                         <Image
@@ -162,3 +160,4 @@ const callbackURL = searchParams.get("callbackURL") || "/";
         </div>
     );
 }
+export default SignInPage;

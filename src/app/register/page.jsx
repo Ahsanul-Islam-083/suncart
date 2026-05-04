@@ -21,7 +21,7 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-export default function SignUpPage() {
+const SignUpPage = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [agreed, setAgreed] = useState(false);
     const router = useRouter();
@@ -183,3 +183,5 @@ export default function SignUpPage() {
         </div>
     );
 }
+
+export default SignUpPage;
