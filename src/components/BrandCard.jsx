@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BrandCard = ({ brand }) => {
     return (
-        <Card className="mx-4 w-52 overflow-hidden hover:shadow-md transition-shadow duration-300 cursor-pointer group flex-shrink-0">
+        <Card className="mx-4 w-52 overflow-hidden hover:shadow-md transition-shadow duration-300 cursor-pointer group shrink-0">
             <div className="relative w-full aspect-video overflow-hidden">
                 <Image
                     src={brand.image}
