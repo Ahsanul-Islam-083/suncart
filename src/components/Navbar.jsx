@@ -39,7 +39,7 @@ const Navbar = () => {
                   
                     <Link href="/" className="flex items-center gap-2 shrink-0">
                         <Image src="/logo.png" alt="SunCart logo" width={30} height={30} priority className="w-auto h-auto" />
-                        <span className="font-black text-xl tracking-tight">SunCart</span>
+                        <span className="font-black text-2xl tracking-tight">SunCart</span>
                     </Link>
 
                     {/* Desktop Navbar */}
