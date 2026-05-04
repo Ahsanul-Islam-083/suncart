@@ -17,10 +17,13 @@ import Link from "next/link";
 import "animate.css";
 import { toast } from "react-toastify";
 import { authClient } from "@/lib/auth-client";
+import { useSearchParams } from "next/navigation";
 
 
 export default function SignInPage() {
     const [showPassword, setShowPassword] = useState(false);
+const searchParams = useSearchParams();
+const callbackURL = searchParams.get("callbackURL") || "/";
 
 
     const onSubmit = async (e) => {
@@ -35,7 +38,7 @@ export default function SignInPage() {
         const { data, error } = await authClient.signIn.email({
             email,
             password,
-            callbackURL: '/'
+            callbackURL: callbackURL,
         });
 
         console.log({ data, error });
