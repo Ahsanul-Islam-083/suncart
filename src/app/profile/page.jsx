@@ -2,7 +2,7 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Avatar, Button } from "@heroui/react";
+import { Avatar, Button, Card } from "@heroui/react";
 import Link from "next/link";
 import { FiEdit2 } from "react-icons/fi";
 
@@ -14,7 +14,7 @@ const ProfilePage = () => {
         <div className="max-w-2xl mx-auto px-4 py-16">
             <h1 className="text-2xl font-bold text-black mb-8">My Profile</h1>
 
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm flex flex-col items-center gap-5">
+            <Card className="w-full p-8 flex flex-col items-center gap-5">
                 <Avatar className="w-20 h-20">
                     <Avatar.Image
                         alt={user?.name}
@@ -28,11 +28,12 @@ const ProfilePage = () => {
                 </div>
 
                 <Link href="/profile/update">
-                    <Button radius="full" className="bg-black text-white text-sm font-medium hover:opacity-80" startContent={<FiEdit2 size={14} />}>
+                    <Button radius="full" className="bg-black text-white text-sm font-medium hover:opacity-80">
+                        <FiEdit2 size={14} />
                         Update Profile
                     </Button>
                 </Link>
-            </div>
+            </Card>
         </div >
     );
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
-import { Button, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { Button, Card, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { FiCheck, FiArrowLeft } from "react-icons/fi";
@@ -36,7 +36,7 @@ const UpdateProfilePage = () => {
 
             <h1 className="text-2xl font-bold text-black mb-8">Update Profile</h1>
 
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+            <Card className="w-full p-8">
                 <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
 
                     <TextField isRequired name="name" type="text" className="w-full" defaultValue={user?.name}>
@@ -53,17 +53,18 @@ const UpdateProfilePage = () => {
                     </TextField>
 
 
-                    <Button type="submit" radius="full" className="bg-black text-white text-sm font-medium hover:opacity-80 w-full mt-2" startContent={<FiCheck size={15} />}>
+                    <Button type="submit" radius="full" className="bg-black text-white text-sm font-medium hover:opacity-80 w-full mt-2">
+                        <FiCheck size={15} />
                         Update Information
                     </Button>
                 </Form>
                 <div className="flex justify-center items-center mt-2.5">
-                    <Link href="/profile" className="flex items-center gap-2 text-sm text-gray-500 hover:text-black transition-colors mb-8">
+                    <Link href="/profile" className="flex items-center gap-2 text-sm text-gray-500 hover:text-cyan-600 hover:font-medium transition-colors mb-8">
                         <FiArrowLeft size={16} />
                         Back to Profile
                     </Link>
                 </div>
-            </div>
+            </Card>
         </div>
     );
 };
