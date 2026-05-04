@@ -5,29 +5,60 @@ import Image from "next/image";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import {
+    Button,
     FieldError,
     Form,
     Input,
     Label,
+    Separator,
     TextField,
 } from "@heroui/react";
 import Link from "next/link";
 import "animate.css";
+import { toast } from "react-toastify";
+import { authClient } from "@/lib/auth-client";
+
 
 export default function SignInPage() {
     const [showPassword, setShowPassword] = useState(false);
 
+
     const onSubmit = async (e) => {
         e.preventDefault();
+
 
         const email = e.target.email.value;
         const password = e.target.password.value;
 
         console.log({ email, password });
+
+        const { data, error } = await authClient.signIn.email({
+            email,
+            password,
+            callbackURL: '/'
+        });
+
+        console.log({ data, error });
+
+        if (!error) {
+            toast.success("Welcome back to SunCart! 👋");
+
+        } else {
+            toast.error(error.message || "Invalid email or password.");
+        }
+
     };
 
-    const handleGoogleSignIn = () => {
-        console.log("Google Sign In");
+    const handleGoogleSignIn = async () => {
+        // console.log("Google Sign In");
+        const { data, error } = await authClient.signIn.social({
+            provider: "google",
+        });
+        if (!error) {
+            toast.success("Welcome to SunCart 🎉");
+        } else {
+            toast.error(error.message || "Something went wrong. Please try again.");
+        }
     };
 
     return (
@@ -66,24 +97,36 @@ export default function SignInPage() {
                             <FieldError />
                         </TextField>
 
-                        {/* LOGIN BUTTON */}
-                        <button type="submit" className="w-full flex items-center justify-center gap-2 bg-cyan-500 text-white rounded-full px-6 py-2.5 text-sm font-medium hover:bg-cyan-600 transition-all mt-2">
+
+                        <Button
+                            type="submit"
+                            radius="full"
+                            className="w-full bg-cyan-500 text-white text-sm font-medium hover:bg-cyan-600 mt-2"
+
+                        >
                             <FiLogIn size={15} />
                             Login
-                        </button>
+                        </Button>
 
-                        {/* DIVIDER */}
+
                         <div className="flex items-center gap-3 my-1">
-                            <div className="flex-1 h-px bg-gray-200" />
+                            <Separator className="flex-1" />
                             <span className="text-xs text-gray-400">or continue with</span>
-                            <div className="flex-1 h-px bg-gray-200" />
+                            <Separator className="flex-1" />
                         </div>
 
                         {/* GOOGLE */}
-                        <button type="button" onClick={handleGoogleSignIn} className="w-full flex items-center justify-center gap-3 border border-gray-200 rounded-full py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        <Button
+                            type="button"
+                            onPress={handleGoogleSignIn}
+                            variant="bordered"
+                            radius="full"
+                            className="w-full border-2 border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-sm font-medium"
+
+                        >
                             <FaGoogle size={16} className="text-red-500" />
                             Sign in with Google
-                        </button>
+                        </Button>
 
                         {/* REGISTER LINK */}
                         <p className="text-sm text-center text-gray-500 mt-2">
@@ -97,7 +140,7 @@ export default function SignInPage() {
 
                 {/* RIGHT SIDE IMAGE */}
                 <div className="hidden md:block w-1/2 p-4">
-                    <div className="relative h-full w-full min-h-[500px] rounded-2xl overflow-hidden">
+                    <div className="relative h-full w-full min-h-125 rounded-2xl overflow-hidden">
                         <Image
                             src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
                             alt="nature"

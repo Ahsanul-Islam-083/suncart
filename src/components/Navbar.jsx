@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+
+    
+
     return (
         <div className="border-b px-2 bg-white z-10">
             <nav className=" flex justify-between items-center py-3 max-w-7xl mx-auto w-full">

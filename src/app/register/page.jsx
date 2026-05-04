@@ -12,13 +12,19 @@ import {
     Label,
     TextField,
     Checkbox,
+    Button,
+    Separator,
 } from "@heroui/react";
 import "animate.css";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [agreed, setAgreed] = useState(false);
+    const router = useRouter();
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -28,11 +34,31 @@ export default function SignUpPage() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log({ name, image, email, password });
+        const { data, error } = await authClient.signUp.email({
+            name,
+            email,
+            password,
+            image,
+        })
+        console.log({ data, error });
+        if (!error) {
+            toast.success("Account created! Welcome to SunCart 🎉");
+            router.push('/signin');
+        } else {
+            toast.error(error.message || "Something went wrong. Please try again.");
+        }
     };
 
-    const handleGoogleSignIn = () => {
-        console.log("Google Sign In");
+    const handleGoogleSignIn = async () => {
+        // console.log("Google Sign In");
+        const { data, error } = await authClient.signIn.social({
+            provider: "google",
+        });
+        if (!error) {
+            toast.success("Welcome to SunCart 🎉");
+        } else {
+            toast.error(error.message || "Something went wrong. Please try again.");
+        }
     };
 
     return (
@@ -98,33 +124,48 @@ export default function SignUpPage() {
 
                         {/* BUTTONS */}
                         <div className="flex flex-wrap gap-3 mt-2">
-                            <button type="submit" className="flex items-center gap-2 bg-cyan-500 text-white rounded-full px-6 py-2.5 text-sm font-medium hover:bg-cyan-600 transition-all">
+                            <Button
+                                type="submit"
+                                radius="full"
+                                className="flex bg-cyan-500 text-white text-sm font-medium hover:bg-cyan-600"
+                            >
                                 <FiCheck size={15} />
                                 Register
-                            </button>
-                            <Link href={'/signin'}><button className="flex items-center gap-2 border border-cyan-500 text-cyan-500 rounded-full px-6 py-2.5 text-sm font-medium hover:bg-cyan-50 transition-all">
+                            </Button>
+                            <Link href={'/signin'}><Button
+                                type="button"
+                                variant="bordered"
+                                radius="full"
+                                className="border border-cyan-500 text-cyan-500 text-sm font-medium hover:bg-cyan-50"
+                            >
                                 Sign In
-                            </button></Link>
+                            </Button></Link>
                         </div>
 
                         {/* DIVIDER */}
                         <div className="flex items-center gap-3 my-1">
-                            <div className="flex-1 h-px bg-gray-200" />
+                            <Separator className="flex-1" />
                             <span className="text-xs text-gray-400">or continue with</span>
-                            <div className="flex-1 h-px bg-gray-200" />
+                            <Separator className="flex-1" />
                         </div>
 
                         {/* GOOGLE */}
-                        <button type="button" onClick={handleGoogleSignIn} className="w-full flex items-center justify-center gap-3 border border-gray-200 rounded-full py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        <Button
+                            type="button"
+                            onPress={handleGoogleSignIn}
+                            variant="bordered"
+                            radius="full"
+                            className="w-full border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-sm font-medium"
+                        >
                             <FaGoogle size={16} className="text-red-500" />
                             Sign in with Google
-                        </button>
+                        </Button>
                     </Form>
                 </div>
 
                 {/* RIGHT SIDE IMAGE */}
                 <div className="hidden md:block w-1/2 p-4">
-                    <div className="relative h-full w-full min-h-[560px] rounded-2xl overflow-hidden">
+                    <div className="relative h-full w-full min-h-140 rounded-2xl overflow-hidden">
                         <Image
                             src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
                             alt="nature"
