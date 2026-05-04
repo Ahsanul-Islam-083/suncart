@@ -1,4 +1,4 @@
-# ☀️ SunCart — Modern Summer E-Commerce Platform
+# [☀️ SunCart — Modern Summer E-Commerce Platform](https://suncart-sigma.vercel.app/)
 
 > **Explore, Shop & Stay Sun-Ready** — A clean, responsive summer e-commerce platform built with Next.js 16, featuring authentication, protected routes, and a seamless shopping experience.
 
@@ -15,7 +15,15 @@
 
 ## 🖼️ Screenshot
 
-> *(Add a screenshot of your app here)*
+
+<img width="1747" height="977" alt="image" src="https://github.com/user-attachments/assets/423c38da-4c2b-4e99-b073-2ef8f0925dae" />
+<img width="1744" height="965" alt="image" src="https://github.com/user-attachments/assets/ca48c614-aace-4fec-b742-e96a93912111" />
+<img width="1659" height="917" alt="image" src="https://github.com/user-attachments/assets/4a5b5cea-c35a-4d17-aa2c-3991919e3580" />
+<img width="1798" height="974" alt="image" src="https://github.com/user-attachments/assets/6fc5ccfc-fd85-4f02-b2c6-4db7d390e1f4" />
+<img width="1642" height="956" alt="image" src="https://github.com/user-attachments/assets/95cbaf5b-b0ca-407c-9a7b-90e17ee3f75b" />
+<img width="1550" height="980" alt="image" src="https://github.com/user-attachments/assets/cb0df712-36c0-4812-ba5e-a27010260c11" />
+
+
 
 ---
 
@@ -137,51 +145,6 @@
 
 ---
 
-## 📁 Project Structure
-
-```
-suncart/
-├── public/
-│   ├── logo.png
-│   ├── brands.json
-│   ├── wave-bg.svg
-│   └── sliderImages/
-├── src/
-│   ├── app/
-│   │   ├── page.jsx               # Homepage
-│   │   ├── not-found.jsx          # 404 page
-│   │   ├── products/
-│   │   │   └── [id]/
-│   │   │       ├── page.jsx       # Product details (protected)
-│   │   │       └── loading.jsx    # Skeleton loader
-│   │   ├── profile/
-│   │   │   ├── page.jsx           # Profile page (protected)
-│   │   │   └── update/
-│   │   │       └── page.jsx       # Update profile
-│   │   ├── signin/
-│   │   │   ├── page.jsx           # Sign in page
-│   │   │   └── loading.jsx        # Skeleton loader
-│   │   └── register/
-│   │       ├── page.jsx           # Register page
-│   │       └── loading.jsx        # Skeleton loader
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Banner.jsx
-│   │   ├── ProductCard.jsx
-│   │   ├── SummerCareTips.jsx
-│   │   ├── TopBrands.jsx
-│   │   ├── BrandsMarquee.jsx
-│   │   └── BrandCard.jsx
-│   ├── lib/
-│   │   └── auth-client.js
-│   └── proxy.js                   # Route protection middleware
-├── .env.local
-├── next.config.js
-└── package.json
-```
-
----
 
 ## 🤝 Contributing
 
