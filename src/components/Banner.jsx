@@ -57,7 +57,7 @@ export default function Banner() {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        className="w-[300px] sm:w-[600px] md:w-[768px] lg:w-[1024px] xl:w-full h-[35vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]"
+        className="w-75 sm:w-150 md:w-3xl lg:w-full h-[35vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]"
       >
         {images.map((image) => (
           <SwiperSlide key={image.imageId}>
